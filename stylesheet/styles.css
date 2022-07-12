@@ -73,7 +73,29 @@ header {
 }
 
 .servizi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 15px;
+    gap: 5px;
+}
+
+.servizi div {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    height: 50px;
+    background-color: aquamarine;
+    box-sizing: border-box;
+    padding: 5px;
+    transition: 1.5s;
+}
+
+.servizi div.right {
+    justify-content: flex-end;
+}
+
+.servizi div:hover {
+    background-color: blue;
 }
 
 footer {
@@ -81,3 +103,6 @@ footer {
     padding: 15px;
 }
 
+a {
+    text-decoration: none;
+}
