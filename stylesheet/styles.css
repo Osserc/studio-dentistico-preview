@@ -58,6 +58,8 @@ body {
     width: 100vw;
     box-sizing: border-box;
     font-size: 24px;
+    background-color: #03339c;
+    color: white;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -68,7 +70,8 @@ body::-webkit-scrollbar {
 
 header {
     font-size: 36px;
-    background-color: lightblue;
+    background-color: #2e70ff;
+    box-shadow: 0px 0px 5px 2px rgb(24, 24, 24);
     padding: 15px;
 }
 
@@ -80,11 +83,13 @@ header {
 }
 
 .services .subtitle {
-    background-color: aqua;
+    background-color: #2e70ff;
+    box-shadow: 0px 0px 5px 2px #2e70ff, inset 0px 0px 5px 2px #03339c;
     width: 100%;
     padding: 15px 0;
     text-align: center;
     letter-spacing: 25px;
+    text-indent: 25px;
 }
 
 .services-list {
@@ -98,18 +103,19 @@ header {
     align-items: center;
     flex-grow: 1;
     height: 50px;
-    background-color: lightblue;
+    background-color: #568bff;
     box-sizing: border-box;
     padding: 5px;
-
+    transition: 1.5s;
 }
 
 .services-list div.right {
     justify-content: flex-end;
 }
 
-.servizi div:hover {
-
+.services-list div:hover {
+    background-color: #2e70ff;
+    box-shadow: 3px 3px 5px 0px ;
 }
 
 footer {
@@ -122,11 +128,14 @@ footer {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 iframe {
     width: 300px;
     height: 300px;
+    border: 2px ridge #2e70ff;
+    box-shadow: 0px 0px 5px 5px #2e70ff;
 }
 
 @media (max-width: 700px) {
