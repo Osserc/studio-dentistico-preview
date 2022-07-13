@@ -101,7 +101,7 @@ header {
     flex-direction: column;
 }
 
-.personnel div.description, .location div.description {
+.personnel div.description, .location div.description, .single-service div.description {
     flex: 1;
     height: 100%;
     overflow: scroll;
@@ -109,7 +109,7 @@ header {
     scrollbar-width: none;
 }
 
-.personnel div.description::-webkit-scrollbar, .location div.description::-webkit-scrollbar {
+.personnel div.description::-webkit-scrollbar, .location div.description::-webkit-scrollbar, .single-service div.description::-webkit-scrollbar {
     display: none;
 }
 
@@ -117,7 +117,7 @@ header {
     text-align: center;
 }
 
-.personnel div.image, .location div.image, .sub-service div.image {
+div.image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,27 +247,18 @@ header.target.active {
     }
 }
 
-@media (max-width: 1100px) {
-
-}
-
 @media (max-width: 700px) {
     .home {
         top: unset;
         bottom: 35px;
     }
 
-    .personnel, .location {
+    .personnel, .location, .single-service {
         gap: 15px;
         margin: 0;
     }
 
-    .sub-location {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .sub-personnel, .sub-location {
+    .sub-personnel, .sub-location, .sub-service {
         height: auto;
         margin: 0;
     }
@@ -277,9 +268,14 @@ header.target.active {
         align-items: center;
     }
 
-    .sub-personnel div.description, .sub-location div.description {
+    .sub-location {
+        flex-direction: column;
+    }
+
+    .sub-personnel div.description, .sub-location div.description, .sub-service div.description {
         max-height: fit-content;
         text-align: center;
+        overflow: unset;
         padding: 0 15px;
     }
 
@@ -316,5 +312,4 @@ header.target.active {
         text-align: center;
         gap: 5px;
     }
-
 }
