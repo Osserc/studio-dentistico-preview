@@ -70,20 +70,22 @@ body::-webkit-scrollbar {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     font-size: 36px;
     background-color: #2e70ff;
     box-shadow: 0px 0px 5px 2px rgb(24, 24, 24);
     padding: 15px;
 }
 
-.personnel, .location, .services {
+.personnel, .location, .services, .single-service {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 0 5%;
 }
 
-.sub-personnel, .sub-location {
+.sub-personnel, .sub-location, .sub-service {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -95,8 +97,8 @@ header {
     max-height: 300px;
 }
 
-.sub-location {
-    flex-direction: column-reverse;
+.sub-location, .sub-service {
+    flex-direction: column;
 }
 
 .personnel div.description, .location div.description {
@@ -115,9 +117,10 @@ header {
     text-align: center;
 }
 
-.personnel div.image {
-    width: fit-content;
-    height: fit-content;
+.personnel div.image, .location div.image, .sub-service div.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .personnel div.image img {
@@ -125,9 +128,10 @@ header {
     height: 100%;
 }
 
-.location div.image img {
-    width: 400px;
-    height: 100%;
+.location div.image img, .sub-service div.image img {
+    max-width: 80%;
+    min-width: 65%;
+    height: auto;
 }
 
 .subtitle {
@@ -204,13 +208,26 @@ iframe {
 }
 
 @media (max-width: 700px) {
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: #2e70ff;
+        border-radius: 25px;
+        width: 30px;
+        height: 30px;
+    }
+
     .personnel, .location {
         gap: 15px;
         margin: 0;
     }
 
     .sub-location {
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: auto;
     }
 
@@ -236,7 +253,7 @@ iframe {
     }
 
     .location div.image img {
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
