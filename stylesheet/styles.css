@@ -75,6 +75,29 @@ header {
     padding: 15px;
 }
 
+.personnel, .location {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    gap: 15px;
+}
+
+.personnel div.description, .location div.description {
+    flex: 1;
+}
+
+.personnel div.left, .location div.left {
+    text-align: right;
+}
+
+
+.image {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+}
+
 .services {
     display: flex;
     flex-direction: column;
@@ -121,9 +144,17 @@ header {
 footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: auto;
     padding: 15px;
+    gap: 25px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 25px;
 }
 
 a {
@@ -139,6 +170,12 @@ iframe {
 }
 
 @media (max-width: 700px) {
+    .personnel, .location {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
     .services-list {
         display: flex;
         flex-direction: column;
@@ -147,9 +184,16 @@ iframe {
     .services-list div, .services-list div.right {
         justify-content: center;
         text-align: center;
+        /* height: 30px; */
     }
 
     footer {
         flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contacts {
+        text-align: center;
+        gap: 5px;
     }
 }
