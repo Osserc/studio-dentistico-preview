@@ -195,36 +195,58 @@ iframe {
     height: 300px;
     border: 2px ridge #2e70ff;
     box-shadow: 0px 0px 5px 5px #2e70ff;
+    opacity: 0;
+    transition: 2.5s;
+}
+
+.active iframe {
+    opacity: 1;
 }
 
 /* on-load animations */
 
 .target {
-    transition: 1.5s;
+    transition: 2.5s;
 }
 
 header.target {
+    opacity: 0;
     transform: translateY(-100%);
 }
 
 header.target.active {
+    opacity: 1;
     transform: translateY(0);
 }
 
 .personnel.target, .services.target, .single-service.target {
+    opacity: 0;
     transform: translateX(-100%);
 }
 
 .personnel.target.active, .services.target.active, .single-service.target.active {
+    opacity: 1;
     transform: translateX(0);
 }
 
-.location.target, footer.target {
+.location.target {
+    opacity: 0;
     transform: translateX(100%);
 }
 
-.location.target.active, footer.target.active {
+.location.target.active {
+    opacity: 1;
     transform: translateX(0);
+}
+
+footer.target {
+    opacity: 0;
+    transform: translateY(80px);
+}
+
+footer.target.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .home {
